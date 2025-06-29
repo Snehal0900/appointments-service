@@ -1,0 +1,10 @@
+package service;
+
+import dto.AppointmentRequestDTO;
+import entity.Appointment;
+
+public interface AppointmentService {
+
+	public Appointment bookAppointment(AppointmentRequestDTO request);
+
+}
