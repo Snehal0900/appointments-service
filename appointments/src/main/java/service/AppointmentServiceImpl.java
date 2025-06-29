@@ -1,0 +1,24 @@
+package service;
+
+import org.springframework.stereotype.Service;
+
+import dto.AppointmentRequestDTO;
+import model.Appointment;
+
+@Service
+public class AppointmentServiceImpl implements AppointmentService {	
+	
+	// till need to  make repository class. Haven't reached for that in sprint yet!!
+	
+	@Override
+	public Appointment bookAppointment(AppointmentRequestDTO request) {
+		Appointment appointment = new Appointment();
+		appointment.setDoctor_id(request.getDoctorId());
+		appointment.setPatient_id(request.getPatientId());
+		appointment.setSlot_id(request.getSlotId());
+		appointment.setApppointment_status(request.getReason());
+		
+		return null;
+	}
+
+}

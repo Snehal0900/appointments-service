@@ -1,0 +1,31 @@
+package model;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "appointments")
+public class Appointment {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	@Column(name = "Doctor_id")
+	private int doctor_id; 
+	
+	@Column(name = "Patient_id")
+	private int patient_id; 
+	
+	@Column(name = "Slot_id")
+	private int slot_id; 
+	
+	@Column(name = "apppointment_status")
+	private String apppointment_status;
+}

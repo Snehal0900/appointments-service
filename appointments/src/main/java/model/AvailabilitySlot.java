@@ -1,0 +1,33 @@
+package model;
+
+import java.util.Date;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "availabilty_slot")
+public class AvailabilitySlot {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	@Column(name = "Doctor_id")
+	private int doctor_id;
+	
+	@Column(name = "Start_time")
+	private Date start_time; 
+	
+	@Column(name = "End_time")
+	private Date end_time; 
+	
+	@Column(name = "is_booked")
+	private boolean is_booked;
+}
